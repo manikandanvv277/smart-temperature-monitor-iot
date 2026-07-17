@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "author": "MANIKANDAN VV",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 67.8, "left": 37.8, "attrs": {} },
+    { "type": "wokwi-dht22", "id": "dht1", "top": -114.9, "left": 301.8, "attrs": {} },
+    { "type": "wokwi-led", "id": "led1", "top": -42, "left": -73, "attrs": { "color": "green" } },
+    {
+      "type": "wokwi-led",
+      "id": "led2",
+      "top": -32.4,
+      "left": -15.4,
+      "attrs": { "color": "red" }
+    },
+    {
+      "type": "wokwi-buzzer",
+      "id": "bz1",
+      "top": -132,
+      "left": 107.4,
+      "attrs": { "volume": "0.1" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 61,
+      "left": -77.65,
+      "rotate": 270,
+      "attrs": { "value": "220" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r2",
+      "top": 62.4,
+      "left": -19.75,
+      "rotate": 90,
+      "attrs": { "value": "220" }
+    }
+  ],
+  "connections": [
+    [ "dht1:SDA", "uno:2", "green", [ "v38.4", "h-57.5" ] ],
+    [ "dht1:VCC", "uno:5V", "red", [ "v297.6", "h-115.2" ] ],
+    [ "dht1:GND", "uno:GND.3", "black", [ "v316.8", "h-124.8" ] ],
+    [ "led1:A", "r1:2", "green", [ "v0" ] ],
+    [ "r1:1", "uno:8", "green", [ "h0", "v76.8", "h76.8", "v-134.4", "h182.4" ] ],
+    [ "led1:C", "uno:GND.3", "black", [ "v316.8", "h278.8" ] ],
+    [ "r2:2", "uno:9", "gold", [ "h28.8", "v-78", "h163.2", "v57.6" ] ],
+    [ "r2:1", "led2:A", "gold", [ "h0" ] ],
+    [ "led2:C", "uno:GND.3", "black", [ "v307.2", "h211.6" ] ],
+    [ "bz1:1", "uno:10", "orange", [ "v96", "h57.6", "v28.8" ] ],
+    [ "bz1:2", "uno:GND.1", "black", [ "v105.6", "h9.2" ] ]
+  ],
+  "dependencies": {}
+}
