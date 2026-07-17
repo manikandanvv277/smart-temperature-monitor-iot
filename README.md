@@ -48,3 +48,10 @@ How It Works
    - Green LED turns ON
    - Red LED and buzzer stay OFF
 4. All readings and system states are logged to the Serial Monitor.
+
+
+
+
+PROJECT (WOKWI)
+
+https://wokwi.com/projects/469773961856659457
